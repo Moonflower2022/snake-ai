@@ -34,7 +34,7 @@ class SnakeEnvCNN(gymnasium.Env):
         if limit_step:
             self.step_limit = self.grid_size * 4 # More than enough steps to get the food.
         else:
-            self.step_limit = 1e9 # Basically no limit.
+            self.step_limit = int(1e9) # Basically no limit.
         self.reward_step_counter = 0
 
     def reset(self, seed=None, **kwargs):

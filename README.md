@@ -27,18 +27,11 @@ This project is based on the Python programming language and mainly uses externa
 ### Environment Configuration
 
 ```bash
-# Create a conda environment named SnakeAI with Python version 3.8.16
-conda create -n SnakeAI python=3.8.16
-conda activate SnakeAI
-
-# [Optional] To use GPU for training, manually install the full version of PyTorch
-conda install pytorch=2.0.0 torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
-
-# [Optional] Run the script to test if PyTorch can successfully call the GPU
-python .\utils\check_gpu_status.py
-
 # Install external code libraries
 pip install -r requirements.txt
+
+# [Optional] Run the script to test if PyTorch can successfully call the GPU
+python ./utils/check_gpu_status.py
 ```
 
 ### Running Tests
@@ -47,7 +40,7 @@ The `main/` folder of the project contains the program scripts for the classic g
 
 ```bash
 cd [parent folder of the project]/snake-ai/main
-python .\snake_game.py
+python snake_game.py
 ```
 
 After completing the environment configuration, you can run `test_cnn.py` or `test_mlp.py` in the `main/` folder to test and observe the actual performance of the two intelligent agents at different training stages.

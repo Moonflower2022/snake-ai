@@ -293,7 +293,7 @@ class SnakeGame:
 if __name__ == "__main__":
     import time
 
-    seed = random.randint(0, 1e9)
+    seed = random.randint(0, int(1e9))
     game = SnakeGame(seed=seed, is_render=True, is_silent=False)
     pygame.init()
     game.screen = pygame.display.set_mode((game.display_width, game.display_height))
