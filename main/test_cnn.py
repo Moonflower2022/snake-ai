@@ -24,7 +24,7 @@ model = MaskablePPO.load(MODEL_PATH)
 
 total_reward = 0
 total_fruits = 0
-min_fruits = 1e9
+min_fruits = int(1e9)
 max_fruits = 0
 wins = 0
 total_win_steps = 0
@@ -32,7 +32,7 @@ total_win_steps = 0
 start_time = time.time()
 
 for episode in range(NUM_EPISODES):
-    obs, info = env.reset(seed=random.randint(0, 1e9))
+    obs, info = env.reset(seed=random.randint(0, int(1e9)))
     episode_reward = 0
     terminated = False
     

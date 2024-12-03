@@ -51,7 +51,7 @@ def main(board_size, mps_available, log_dir, save_dir, save_name, num_env):
     # Generate a list of random seeds for each environment.
     seed_set = set()
     while len(seed_set) < num_env:
-        seed_set.add(random.randint(0, 1e9))
+        seed_set.add(random.randint(0, int(1e9)))
 
     # Create the Snake environment.
     env = SubprocVecEnv([make_env(board_size, seed=s) for s in seed_set])
