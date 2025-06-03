@@ -95,4 +95,4 @@ def main(board_size, log_dir, save_dir, save_name, num_env):
     model.save(os.path.join(save_dir, "ppo_final.zip"))
 
 if __name__ == "__main__":
-    main(BOARD_SIZE, SAVE_DIR, SAVE_NAME, NUM_ENV)
+    main(BOARD_SIZE, LOG_DIR, SAVE_DIR, SAVE_NAME, NUM_ENV)

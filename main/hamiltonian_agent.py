@@ -42,7 +42,7 @@ def find_next_action(snake_head, next_position):
         return -1
 
 def main():
-    seed = random.randint(0, 1e9)
+    seed = random.randint(0, int(1e9))
     print(f"Using seed = {seed} for testing.")
 
     env = SnakeEnvCNN(seed=seed, board_size=BOARD_SIZE, is_render=True, is_silent=False, cell_size=80, border_size=40)

@@ -12,7 +12,7 @@ if __name__ == "__main__":
     board_size = 6
     is_silent = False
 
-    seed = random.randint(0, 1e9)
+    seed = random.randint(0, int(1e9))
     print("Seed:", seed)
 
     env = SnakeEnvCNN(seed=seed, board_size=board_size, is_render=True, is_silent=is_silent, enlarge_multiplier=84/board_size, cell_size=70*6/board_size, border_size=20)
